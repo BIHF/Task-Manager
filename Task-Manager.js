@@ -6,6 +6,7 @@ const r1 = readline.createInterface({
 let tasks = [];
 
 function showMenu(){
+    console.log("                          ");
     console.log("\nWelcome to Task Manager!");
     console.log("1.List tasks");
     console.log("2. Add new task");
