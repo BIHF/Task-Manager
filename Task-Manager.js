@@ -1,5 +1,4 @@
 import readline from "readline";
-import CacheHandler from "undici-types/cache-interceptor";
 const r1 = readline.createInterface({
     input:process.stdin, 
     output:process.stdout
@@ -13,7 +12,7 @@ function showMenu(){
     console.log("3. Mark task as complete");
     console.log("4. Delete task");
     console.log("5. Exit");
-    r1.question("Enter your choice: ",handMenu);
+    r1.question("Enter your choice: ",handleMenu);
 }
 
 function handleMenu(choice) {
@@ -27,3 +26,4 @@ function handleMenu(choice) {
   }
 }
 
+showMenu();
