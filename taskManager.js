@@ -7,7 +7,7 @@ let tasks = [];
 
 function showMenu(){
     console.log("\nWelcome to Task Manager!");
-    console.log("1.List tasks");
+    console.log("1. List tasks");
     console.log("2. Add new task");
     console.log("3. Mark task as complete");
     console.log("4. Delete task");
@@ -31,13 +31,13 @@ showMenu();
 function listTasks() {
     console.log("\nYour Tasks:");
 
-    if (tasks.length === 0) {
-        console.log("No tasks available.");
-    } else {
-        tasks.forEach((task, index) => {
-            const checkbox = task.completed ? "[x]" : "[ ]";
-            console.log(`${index + 1}. ${checkbox} ${task.name}`);
-        });
-    }
+    showMenu();
 }
 
+function addNewTasks(){ 
+    r1.question("Enter new task name:", function(taskName){
+    tasks.push({ name: taskName, completed: false });
+        console.log("✅ Task added!\n");
+        showMenu();
+    });
+}
