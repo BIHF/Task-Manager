@@ -22,8 +22,22 @@ function handleMenu(choice) {
     case "3": markTaskasComplete(); break;
     case "4": deleteTask(); break;
     case "5": exit(); break;
-    default: console.log("Invalid choice"); showMenu();
+    default: console.log("Invalid choice"); 
   }
 }
 
 showMenu();
+
+function listTasks() {
+    console.log("\nYour Tasks:");
+
+    if (tasks.length === 0) {
+        console.log("No tasks available.");
+    } else {
+        tasks.forEach((task, index) => {
+            const checkbox = task.completed ? "[x]" : "[ ]";
+            console.log(`${index + 1}. ${checkbox} ${task.name}`);
+        });
+    }
+}
+
