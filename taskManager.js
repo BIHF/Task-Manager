@@ -24,6 +24,7 @@ function handleMenu(choice) {
     case "4": deleteTask(); break;
     case "5": exit(); break;
     default: console.log("Invalid choice"); 
+        showMenu();
   }
 }
 
@@ -37,7 +38,7 @@ function listTasks() {
     } else {
         for (let i = 0; i< tasks.length; i++){
             let task = tasks[i];
-            let status = task.completed ? "[✔]" : "[ ]";
+            let status = task.completed ? "[x]" : "[ ]";
 
             console.log((i+1) + "." + status + " " + task.name);
         }
@@ -50,7 +51,9 @@ function addNewTasks(){
     r1.question("Enter new task name:", function(taskName){
         if (taskName.trim() === ""){
             console.log("Task name cannot be empty!");
+            showMenu();
             return;
+            
         }
     tasks.push({ name: taskName, completed: false });
         console.log("✅ Task added!\n");
@@ -64,12 +67,32 @@ function markTaskasComplete(){
 
         if (index < 0 || index >= tasks.length) {
             console.log("Invail task number!");
+            showMenu();
             return;
         }
         tasks[index].completed = true;
-        console.log("✔ Task marked as complete!")
+        console.log("✅ Task " + num + " marked as complete!");
         showMenu();
-    });
+    });    
+}
 
-    
+function deleteTask() {
+    r1.question("Enter task number to delete: ", function(num) {
+        let index = Number(num) - 1;
+
+        if (index < 0 || index >= tasks.length) {
+            console.log ( "Invaild task number!");
+            showMenu();
+            return;
+        }
+
+        tasks.splice(index, 1);
+        console.log("❌ Task deleted!");
+        showMenu(); 
+    });
+}
+
+function exit() {
+    console.log("👋 Exiting program. Goodbye!Goodbye!");
+    r1.close();  // stop input
 }
