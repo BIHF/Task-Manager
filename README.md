@@ -22,8 +22,6 @@ This Task Manager allows you to:
 - Delete tasks with confirmation  
 - Input validation for task numbers  
 
----
-
 ## 📌 2. How to Run the Application
 
 - **Node.js version:** v24.11.1  
@@ -35,12 +33,14 @@ This Task Manager allows you to:
    ```sh
    cd "C:\Users\HP\OneDrive - Sabaragamuwa University of Sri Lanka\Desktop\Task Manager"
 2. Run the program:
-  node taskManager.js
+   ```sh
+    node taskManager.js
 3. Push the program to GitHub repository:
-  git push origin main
+   ```sh
+     git push origin main
 
 ### ⚠️ Usage Notes & Limitations
-Data Persistence: Tasks are stored in memory only and will be lost when the application closes
-Input Validation: Application validates both menu choices and task numbers
-Empty Tasks: Prevents adding tasks with empty names
-Task Numbers: Uses 1-based indexing (first task is #1, not #0)
+- Data Persistence: Tasks are stored in memory only and will be lost when the application closes
+- Input Validation: Application validates both menu choices and task numbers
+- Empty Tasks: Prevents adding tasks with empty names
+- Task Numbers: Uses 1-based indexing (first task is #1, not #0)
