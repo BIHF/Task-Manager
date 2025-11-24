@@ -7,12 +7,12 @@ This Task Manager allows you to: <br>
   List tasks - View all your tasks with their completion status <br>
   Add new tasks - Create new tasks to track <br>
   Mark tasks as complete - Update task status when finished <br>
-  Delete tasks - Remove tasks you no longer need
+  Delete tasks - Remove tasks you no longer need <br>
   Exit gracefully - Close the application properly
 
 
 ### ⭐ Additional Features
-  Interactive menu-driven interface
+  Interactive menu-driven interface - 
   Task listing with completion indicators ([ ] for incomplete, [x] for complete)
   Add new tasks with validation
   Mark tasks as completed
