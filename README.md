@@ -3,7 +3,7 @@
 This Task Manager is a console-based program created using the Node.js `readline` module.  It helps users manage daily tasks through a simple text interface.
 
 ### ✔ Implemented Functionalities
-This Task Manager allows you to:
+This Task Manager allows you to: - 
   List tasks - View all your tasks with their completion status
   Add new tasks - Create new tasks to track
   Mark tasks as complete - Update task status when finished
