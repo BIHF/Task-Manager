@@ -6,6 +6,7 @@ const r1 = readline.createInterface({
 })
 let tasks = [];
 
+// Show menu options
 function showMenu(){
     console.log("\nWelcome to Task Manager!");
     console.log("1. List tasks");
@@ -16,6 +17,7 @@ function showMenu(){
     r1.question("Enter your choice: ",handleMenu);
 }
 
+//Handle user input
 function handleMenu(choice) {
   switch (choice) {
     case "1": listTasks(); break;
@@ -30,6 +32,7 @@ function handleMenu(choice) {
 
 showMenu();
 
+//List all tasks
 function listTasks() {
     console.log("\nYour Tasks:");
 
@@ -47,6 +50,7 @@ function listTasks() {
     showMenu();
 }
 
+//Add a new task
 function addNewTasks(){ 
     r1.question("Enter new task name:", function(taskName){
         if (taskName.trim() === ""){
@@ -61,6 +65,7 @@ function addNewTasks(){
     });
 }
 
+// Mark a task as copleted
 function markTaskasComplete(){
     r1.question("Enter task number to complete: ", function(num){
         let index = Number(num) - 1;
@@ -76,6 +81,7 @@ function markTaskasComplete(){
     });    
 }
 
+//Delete a task
 function deleteTask() {
     r1.question("Enter task number to delete: ", function(num) {
         let index = Number(num) - 1;
@@ -92,7 +98,8 @@ function deleteTask() {
     });
 }
 
+// End the program
 function exit() {
-    console.log("👋 Exiting program. Goodbye!Goodbye!");
+    console.log("👋 Exiting program. Goodbye!");
     r1.close();  // stop input
 }
